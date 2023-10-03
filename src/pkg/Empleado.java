@@ -26,15 +26,12 @@ public class Empleado {
 	
 	public float calculaNominaNeta(float nominaBruta) {
 		
-		float nominaNeta;
+		float nominaNeta= nominaBruta;
 		
-		if (nominaBruta < 2100) {
-			nominaNeta= nominaBruta;
-		}else if (nominaBruta < 2500)
+		if (nominaBruta > 2100 && nominaBruta < 2500)
 			nominaNeta = (float) (nominaBruta - (nominaBruta * 0.15));
-		else
+		else if (nominaBruta >= 2500)
 			nominaNeta = (float) (nominaBruta - (nominaBruta * 0.18));
-		
 		
 		return nominaNeta;
 	}
